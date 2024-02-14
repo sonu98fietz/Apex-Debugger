@@ -1,0 +1,24 @@
+<template>
+<div class="container">
+<button onclick={handleLoad} class="btn info">Load Users details</button>
+ 
+        <table>
+            <template if:true={userDetailsLoad}>
+            <tr class="header">
+                <th style="width:30%">ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+            </tr>   
+        </template>
+        <template for:each={users} for:item='u'>
+                 <tr key={u.Id}>
+                    <td>{u.Id}</td>
+                    <td>{u.Name}</td>
+                    <td>{u.Email}</td>
+                    <td>{u.IsActive}</td>
+                </tr>
+        </template>
+    </table>
+</div> 
+</template>

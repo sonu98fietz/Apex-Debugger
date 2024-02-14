@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:registerEvent name="cmpEvent" type="c:ComponentEventDemo"/>
+    <aura:attribute name="strText" type="string" default="demo"/>
+    <lightning:input value="{!v.strText}" type="text" label="Account Name"/>
+    <lightning:button label="Click Here" variant="brand" onclick="{!c.childComponentEventCall}"/>
+   
+</aura:component>

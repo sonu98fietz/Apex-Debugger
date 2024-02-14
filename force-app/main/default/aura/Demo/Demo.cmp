@@ -1,0 +1,20 @@
+<aura:component  controller= "AccountListController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <h1> HI SONU KURUVILA</h1>
+    <aura:handler name = "init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name= "strText" type="string" default="Demo Text Sonu"/>
+    <aura:attribute name = "str" type= "Integer" />
+    <aura:attribute name="changedText" type="string" default="demo sonu"/>
+    
+    <aura:attribute name ="accList" type="account[]"/>
+    <div>
+        <lightning:input value="{!v.strText}" type="text" label="person Name"/>
+        <lightning:button variant="brand" label="Update Person" onClick="{!c.clickEdit}"/>
+    </div>
+    <p>
+        the value --> {!v.changedText}
+    </p>
+    <aura:iteration items="{!v.accList}" var="acc"><p>
+        {!acc.Name}
+        </p></aura:iteration>
+</aura:component>

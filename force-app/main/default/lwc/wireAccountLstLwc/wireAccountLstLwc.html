@@ -1,0 +1,12 @@
+<template>
+<h1>THIS IS MY ACCOUNT LIST</h1>
+<button onclick={loadAccountDetails} >Load Account </button>
+<template if:true={showAccount}>
+    <template for:each={lstAcc} for:item="acc">
+        <p key = {acc.Id}>{acc.Name}</p>
+    </template>
+</template>
+<template if:false={showAccount}>
+   <h3>NO DATA</h3>
+</template>
+</template>

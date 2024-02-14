@@ -1,0 +1,24 @@
+<template>
+<h1> Lightning Record form data service in lwc {recordId}</h1>
+<lightning-card  title = "Account details from record form">
+    <lightning-record-form 
+        record-id ={recordId}
+        object-api-name="Account"
+        fields = {selectedFields}
+        mode = "edit">
+    </lightning-record-form>
+</lightning-card>
+<h3> Lightning Record Edit form in LWC {recordId}</h3>
+<lightning-card title ="Account Details from record edit form">
+<lightning-record-edit-form id="recordViewForm"
+            record-id={recordId}
+            object-api-name="Account">
+    <lightning-messages></lightning-messages>
+    <lightning-input-field field-name={account_Name}></lightning-input-field>
+    <lightning-input-field field-name={account_Phone}></lightning-input-field>
+    <lightning-input-field field-name={account_Industry}></lightning-input-field>
+    <!-- submit -->
+    <lightning-button type="submit" label="Update record"></lightning-button>
+</lightning-record-edit-form>
+</lightning-card>
+</template>
